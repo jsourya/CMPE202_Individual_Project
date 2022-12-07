@@ -17,4 +17,5 @@
   - I have used Strategy design pattern to know the file format input file comes in(JSON, CSV, XML). It also allows to use this implementation in the future for newer file formats.In this patter, we encapsulate the Parser interface deatils and hide the implementation details in the derived classes (CSVParser, XMLParser, JSONParser). After parsing these, we extract the card number from the input files and now we need to identify the type of the credit card that is the MasterCard, Visa, Discover( by matching the regular expressions) . For identifying the type of card, we use the Factory Design pattern. This is done by using CardFactory class object for the Card class. Based on the argumnets given it creates the particular credit  card type.
 
 - Describe the consequences of using this/these pattern(s).
-  - 
+  - Strategy Pattern:
+  -pros:This pattern can helps to swap algorithms used inside an object at runtime. Also, it can isolate the implementation details of an algorithm from the code that client use it.
