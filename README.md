@@ -1,9 +1,9 @@
 # CMPE202_Individual_Project
 ## Design Patterns:
 
-### Factory Design Pattern
+### 1.Factory Design Pattern
 ![alt-text](https://github.com/jsourya/CMPE202_Individual_Project/blob/main/IndividualProject/images/image_2022_12_07T04_34_48_006Z.png)
-### Strategy Design Pattern
+### 2.Strategy Design Pattern
 
 ![alt-text](https://github.com/jsourya/CMPE202_Individual_Project/blob/main/IndividualProject/images/image_2022_12_07T04_42_59_857Z.png)
 - Describe what is the primary problem you try to solve.
