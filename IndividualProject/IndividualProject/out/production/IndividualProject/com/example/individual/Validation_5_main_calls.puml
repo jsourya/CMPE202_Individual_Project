@@ -1,0 +1,319 @@
+@startuml
+
+/' diagram meta data start
+config=CallConfiguration;
+{
+  "rootMethod": "com.example.individual.Validation#main(String[])",
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": true,
+    "cutInterfaceStructures": true,
+    "cutDataStructures": true,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 3,
+    "backwardDepth": 3,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showMethodParametersTypes": false,
+    "showMethodParametersNames": false,
+    "showMethodReturnType": false,
+    "showPackageLevels": 2,
+    "showCallOrder": false,
+    "edgeMode": "MethodsOnly", // TypesOnly, MethodsOnly, TypesAndMethods, MethodsAndDirectTypeUsage
+    "showDetailedClassStructure": false
+  },
+  "rootClass": "com.example.individual.Validation",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="LR"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_1322970774 { 
+   	label=example
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1335527837 { 
+   	label=individual
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   subgraph cluster_1244681482 { 
+   	label=CardFactory
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   CardFactory1613365034XXXgetCard1142137748[
+	label="+ getCard()"
+	style=filled
+	fillcolor=white
+	tooltip="CardFactory
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1336838159 { 
+   	label=ValidationTest
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   ValidationTest1613365034XXXtestMain0[
+	label="+ testMain()"
+	style=filled
+	fillcolor=white
+	tooltip="ValidationTest
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1466297337 { 
+   	label=ParserFactory
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   ParserFactory1613365034XXXgetParser1808118735[
+	label="+ getParser()"
+	style=filled
+	fillcolor=white
+	tooltip="ParserFactory
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1705423566 { 
+   	label=XMLParser
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   XMLParser1613365034XXXparse1808118735[
+	label="+ parse()"
+	style=filled
+	fillcolor=white
+	tooltip="XMLParser
+
+null"
+	fontcolor=darkgreen
+];
+
+XMLParser1613365034XXXwrite1613986013[
+	label="+ write()"
+	style=filled
+	fillcolor=white
+	tooltip="XMLParser
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_2006514211 { 
+   	label=Validation
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Validation1613365034XXXgetCardID1808118735[
+	label="+ getCardID()"
+	style=filled
+	fillcolor=white
+	tooltip="Validation
+
+&#10;  Get the Card type returns the credit card type INVALID = -1; VISA = 0;&#10;  MASTERCARD = 1; AMERICAN_EXPRESS = 2; DISCOVER = 3&#10; "
+	fontcolor=darkgreen
+];
+
+Validation1613365034XXXgetCardName104431[
+	label="+ getCardName()"
+	style=filled
+	fillcolor=white
+	tooltip="Validation
+
+null"
+	fontcolor=darkgreen
+];
+
+Validation1613365034XXXisNumber1808118735[
+	label="+ isNumber()"
+	style=filled
+	fillcolor=white
+	tooltip="Validation
+
+null"
+	fontcolor=darkgreen
+];
+
+Validation1613365034XXXmain1859653459[
+	label="+ main()"
+	style=filled
+	fillcolor=white
+	tooltip="Validation
+
+null"
+	penwidth=4
+	fontcolor=darkgreen
+];
+
+Validation1613365034XXXvalidCC1808118735[
+	label="+ validCC()"
+	style=filled
+	fillcolor=white
+	tooltip="Validation
+
+&#10;  Valid a Credit Card number&#10; "
+	fontcolor=darkgreen
+];
+
+Validation1613365034XXXvalidCCNumber1808118735[
+	label="+ validCCNumber()"
+	style=filled
+	fillcolor=white
+	tooltip="Validation
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_2118885483 { 
+   	label=JSONParser
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   JSONParser1613365034XXXparse1808118735[
+	label="+ parse()"
+	style=filled
+	fillcolor=white
+	tooltip="JSONParser
+
+null"
+	fontcolor=darkgreen
+];
+
+JSONParser1613365034XXXwrite1613986013[
+	label="+ write()"
+	style=filled
+	fillcolor=white
+	tooltip="JSONParser
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_251555871 { 
+   	label=CSVParser
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   CSVParser1613365034XXXparse1808118735[
+	label="+ parse()"
+	style=filled
+	fillcolor=white
+	tooltip="CSVParser
+
+null"
+	fontcolor=darkgreen
+];
+
+CSVParser1613365034XXXwrite1613986013[
+	label="+ write()"
+	style=filled
+	fillcolor=white
+	tooltip="CSVParser
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+} 
+
+'edges    
+Validation1613365034XXXgetCardID1808118735 -> Validation1613365034XXXisNumber1808118735;
+Validation1613365034XXXmain1859653459 -> CSVParser1613365034XXXparse1808118735;
+Validation1613365034XXXmain1859653459 -> CSVParser1613365034XXXwrite1613986013;
+Validation1613365034XXXmain1859653459 -> CardFactory1613365034XXXgetCard1142137748;
+Validation1613365034XXXmain1859653459 -> JSONParser1613365034XXXparse1808118735;
+Validation1613365034XXXmain1859653459 -> JSONParser1613365034XXXwrite1613986013;
+Validation1613365034XXXmain1859653459 -> ParserFactory1613365034XXXgetParser1808118735;
+Validation1613365034XXXmain1859653459 -> Validation1613365034XXXgetCardID1808118735;
+Validation1613365034XXXmain1859653459 -> Validation1613365034XXXgetCardName104431;
+Validation1613365034XXXmain1859653459 -> Validation1613365034XXXvalidCC1808118735;
+Validation1613365034XXXmain1859653459 -> XMLParser1613365034XXXparse1808118735;
+Validation1613365034XXXmain1859653459 -> XMLParser1613365034XXXwrite1613986013;
+Validation1613365034XXXvalidCC1808118735 -> Validation1613365034XXXgetCardID1808118735;
+Validation1613365034XXXvalidCC1808118735 -> Validation1613365034XXXvalidCCNumber1808118735;
+ValidationTest1613365034XXXtestMain0 -> Validation1613365034XXXmain1859653459;
+    
+}
+@enduml
