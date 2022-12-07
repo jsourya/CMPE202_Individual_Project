@@ -16,20 +16,14 @@ public class Validation {
     private static final String[] cardNames = { "Visa", "Mastercard",
             "American Express", "Discover" };
 
-    /**
-     * Valid a Credit Card number
-     */
-    public static boolean validCC(String number){
+  
+    public static boolean vCC(String number){
         int CardID;
         if ((CardID = getCardID(number)) != -1){
-            return validCCNumber(number);}
+            return vCCNum(number);}
         return false;
     }
 
-    /**
-     * Get the Card type returns the credit card type INVALID = -1; VISA = 0;
-     * MASTERCARD = 1; AMERICAN_EXPRESS = 2; DISCOVER = 3
-     */
     public static int getCardID(String number) {
         int valid = INVALID;
 
@@ -39,33 +33,22 @@ public class Validation {
         String digit4 = number.substring(0, 4);
 
         if (isNumber(number)) {
-            /*
-             * ----* VISA prefix=4* ---- length=13 or 16 (can be 15 too!?!
-             * maybe)
-             */
+
             if (digit1.equals("4")) {
                 if (number.length() == 13 || number.length() == 16)
                     valid = VISA;
             }
-            /*
-             * ----------* MASTERCARD prefix= 51 ... 55* ---------- length= 16
-             */
+
             else if (digit2.compareTo("51") >= 0 && digit2.compareTo("55") <= 0) {
                 if (number.length() == 16)
                     valid = MASTERCARD;
             }
 
-            /*
-             * ----* DISCOVER card prefix = 60* -------- lenght = 16* left as an
-             * exercise ...
-             */
             else if (digit4.equals("6011")) {
                 if (number.length() == 16)
                     valid = DISCOVER;
             }
-            /*
-             * ----* AMEX prefix=34 or 37* ---- length=15
-             */
+
             else if (digit2.equals("34") || digit2.equals("37")) {
                 if (number.length() == 15)
                     valid = AMERICAN_EXPRESS;
@@ -82,7 +65,7 @@ public class Validation {
             double d = Double.valueOf(n);
             return true;
         } catch (NumberFormatException e) {
-            //e.printStackTrace();
+
             return false;
         }
     }
@@ -91,11 +74,9 @@ public class Validation {
         return (id > -1 && id < cardNames.length ? cardNames[id] : "");
     }
 
-    public static boolean validCCNumber(String n) {
+    public static boolean vCCNum(String n) {
         try {
-            /*
-             * * known as the LUHN Formula (mod10)
-             */
+
             int j = n.length();
 
             String[] s1 = new String[j];
@@ -126,10 +107,11 @@ public class Validation {
     }
 
     public static void main(String args[]) throws Exception {
-
+        /*change dir name to input file location*/
         File f= new File("C:/Users/Checkout/Downloads/input_file.json");
         String Name = f.getName();
         Parser parser=ParserFactory.getParser(Name);
+        /*  change dir  to input file location*/
         ArrayList<String> aCardArr = parser.parse("C:/Users/Checkout/Downloads/input_file.json");
         System.out.println("Card number : "+ aCardArr);
         ArrayList<String> str1= new ArrayList<>();
@@ -140,7 +122,7 @@ public class Validation {
                 CreditCard card = null;
                 CardFactory cardFactory = new CardFactory();
 
-                if ((validCC(aCard))) {
+                if ((vCC(aCard))) {
 
                     card = cardFactory.getCard(cardType, aCard);
                     System.out.println("This is a " + getCardName(cardType) + " card. "
