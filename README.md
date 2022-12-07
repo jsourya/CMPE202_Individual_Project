@@ -18,7 +18,7 @@
 
 - Describe the consequences of using this/these pattern(s).
   - Strategy Pattern:
-  **pros:**This pattern can helps to swap algorithms used inside an object at runtime. Also, it can isolate the implementation details of an algorithm from the code that client use it.
+  **pros:**This pattern can helps to swap algorithms used inside an object at runtime. Also, it can isolate the implementation details of an algorithm from the code that client use it.<br />
   cons: If we only have a couple of algorithms and they rarely change, there’s no real reason to overcomplicate the program with new classes and interfaces that come along with the pattern. Also, Clients must be aware of the differences between strategies to be able to select a proper one.
   
   - Factory Pattern:
