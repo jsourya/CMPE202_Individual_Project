@@ -18,4 +18,11 @@
 
 - Describe the consequences of using this/these pattern(s).
   - Strategy Pattern:
-  -pros:This pattern can helps to swap algorithms used inside an object at runtime. Also, it can isolate the implementation details of an algorithm from the code that client use it.
+  pros:This pattern can helps to swap algorithms used inside an object at runtime. Also, it can isolate the implementation details of an algorithm from the code that client use it.
+  cons: If we only have a couple of algorithms and they rarely change, there’s no real reason to overcomplicate the program with new classes and interfaces that come along with the pattern. Also, Clients must be aware of the differences between strategies to be able to select a proper one.
+  
+  - Factory Pattern:
+  pros: You avoid tight coupling between the creator and the concrete products.
+ Single Responsibility Principle. You can move the product creation code into one place in the program, making the code easier to support.
+ Open/Closed Principle. You can introduce new types of products into the program without breaking existing client code.
+ cons: The code may become more complicated since you need to introduce a lot of new subclasses to implement the pattern. The best case scenario is when you’re introducing the pattern into an existing hierarchy of creator classes.
